@@ -1,0 +1,110 @@
+.tile {
+  &__header {
+    h2 {
+      font-size: 32px;
+      color: $light_pink;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+  &__summary {
+    font-size: $base_font;
+    line-height: 1rem;
+    color: $grey;
+    margin-bottom: $base_margin;
+  }
+
+  &__list {
+    @media #{$mq-small} {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media #{$mq-medium} {
+      margin: 15px -10px;
+    }
+  }
+
+  &__item {
+    color: $white;
+    margin-bottom: $base_margin;
+    border: none;
+    padding: $base_padding $base_padding 56px $base_padding;
+    min-height: 250px;
+    position: relative;
+
+    @media #{$mq-small} {
+      flex: 0 0 43%;
+    }
+
+    @media #{$mq-medium} {
+      max-width: 276px;
+      margin: 0 10px 20px 10px;
+      flex: 0 0 30%;
+    }
+
+    &.bg-yellow {
+      background: $yellow;
+    }
+
+    &.bg-blue {
+      background: $blue;
+    }
+
+    &.bg-purple {
+      background: $purple;
+    }
+
+    &__date {
+      font-size: 14px;
+    }
+
+    &__title {
+      margin: $base_margin * 0.5 0;
+      font-size: 20px;
+      line-height: 1.1rem;
+    }
+
+    &__content {
+      font-size: 14px;
+      line-height: 1rem;
+      margin-bottom: $base_margin;
+    }
+
+    &__btn {
+      border: 1px solid $white;
+      border-radius: 4px;
+      font-size: 12px;
+      transition: all 0.08s ease-in;
+      position: absolute;
+      bottom: $base_margin;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    &__btn {
+      text-align: center;
+
+      button {
+        border-radius: 4px;
+        color: $light_pink;
+        font-weight: bold;
+        border: 1px solid $light_pink;
+        transition: all 0.08s ease-in;
+
+        &:hover,
+        &:focus {
+          background: $light_pink;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import './_variables.scss';
+@import './_setting.scss';
+@import './components/tile.scss';
+
+.app {
+  &__wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: $base_padding;
+  }
+}
