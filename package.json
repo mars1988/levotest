@@ -2,7 +2,7 @@
   "name": "levotest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mars1988.github.io/levotest",
+  "homepage": "http://mars1988.github.io/levotest",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -b deployment -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +48,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.23.1",
+    "gh-pages": "^3.1.0",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0"
   }
