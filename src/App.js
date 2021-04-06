@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import Header from './components/Header';
-import Tile from './components/Tile';
-import './style/app.scss';
-
-const SOURCE_PATH = './service/test.json';
+import React, { Component } from 'react'
+import Header from './components/Header'
+import Tile from './components/Tile'
+import './style/app.scss'
+const SOURCE_PATH = './service/test.json'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       items: [],
       visible: 3,
       error: false
-    };
+    }
   }
 
   loadMore = () => {
     this.setState((prev) => {
-      return {visible: prev.visible + 3};
-    });
+      return { visible: prev.visible + 3 }
+    })
   }
 
   componentDidMount = () => {
@@ -27,17 +26,17 @@ class App extends Component {
     ).then(res => {
       this.setState({
         items: JSON.parse(JSON.stringify(res))
-      });
+      })
     }).catch(error => {
-      console.error(error);
+      console.error(error)
       this.setState({
         error: true
-      });
-    });
+      })
+    })
   }
 
-  render() {
-    const {items,visible} = this.state;
+  render () {
+    const { items, visible } = this.state
     return (
       <div className="app">
         <div className="app__wrapper">
@@ -56,8 +55,8 @@ class App extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
